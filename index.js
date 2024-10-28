@@ -7,9 +7,13 @@ const fastify = require('fastify')({
 // TEST
 fastify.route(name)
 
-fastify.listen({ port: 3000 }, (err) => {
-  if (err) {
-    fastify.log.error(err)
-    process.exit(1)
-  }
-})
+if (typeof PhusionPassenger !== 'undefined') {
+  fastify.listen({ path: 'passenger', host: '127.0.0.1' })
+} else {
+  fastify.listen({ port: 3000 }, (err) => {
+    if (err) {
+      fastify.log.error(err)
+      process.exit(1)
+    }
+  })
+}
