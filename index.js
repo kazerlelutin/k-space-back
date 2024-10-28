@@ -1,4 +1,4 @@
-const name = require('../ctrl/name')
+const name = require('./ctrl/name')
 
 const fastify = require('fastify')({
   logger: process.env.NODE_ENV !== 'production',
