@@ -4,6 +4,7 @@ const fastify = require('fastify')({
   logger: process.env.NODE_ENV !== 'production',
 })
 
+// TEST
 fastify.route(name)
 
 fastify.listen({ port: 3000 }, (err) => {
