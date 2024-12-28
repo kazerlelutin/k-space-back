@@ -1,3 +1,4 @@
+require('dotenv').config()
 const games = require('./ctrl/games')
 const gifs = require('./ctrl/gifs')
 const name = require('./ctrl/name')
